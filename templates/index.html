@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tornado Tracker</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>
+        Welcome To Tornado Hunters' Website
+    </h1>
+
+<div id="tornadoPlot"></div>
+
+<script>
+fetch('/tornado_data')
+    .then(response => response.json())
+    .then(data => {
+        Plotly.newPlot('tornadoPlot', data.data, data.layout);
+    });
+</script>
+
+</body>
+</html>
