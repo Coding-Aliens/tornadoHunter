@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visualization - Tornado Tracker</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/visualization">Visualization</a></li>
+        </ul>
+    </nav>
+    <div id="tornadoPlot" style="width: 100%; height: 100vh;"></div>
+    <script>
+    const graphData = JSON.parse('{{ graphJSON | safe }}');
+    Plotly.newPlot('tornadoPlot', graphData.data, graphData.layout);
+    </script>
+</body>
+</html>
+

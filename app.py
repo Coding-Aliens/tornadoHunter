@@ -13,15 +13,17 @@ df = pd.read_csv('tornado_data.csv')
 def index():
     return render_template('index.html')
 
-@app.route('/tornado_data')
-def tornado_data():
+@app.route('/visualization')
+def visualization():
     # Create a Plotly figure
-    fig = px.scatter_geo(df, lat='latitude', lon='longitude', color='magnitude',
-                         hover_name='location', size='magnitude',
-                         projection="natural earth", title="Tornado Data")
+    fig = px.scatter_geo(df, lat='slat', lon='slon', color='mag',
+                         hover_name='st', size='mag',
+                         projection="natural earth",
+                         title="Tornado Data", scope='north america')
+
     # Convert the figure to JSON
-    graphJSON = json.dumps(fig, cls=pio.utils.PlotlyJSONEncoder)
-    return graphJSON
+    graphJSON = pio.to_json(fig)
+    return render_template('visualization.html', graphJSON=graphJSON)
 
 if __name__ == '__main__':
     app.run(debug=True)
