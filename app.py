@@ -6,24 +6,25 @@ import json
 
 app = Flask(__name__)
 
-# Load the tornado data
-df = pd.read_csv('tornado_data.csv')
-
 @app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/visualization')
-def visualization():
-    # Create a Plotly figure
-    fig = px.scatter_geo(df, lat='slat', lon='slon', color='mag',
-                         hover_name='st', size='mag',
-                         projection="natural earth",
-                         title="Tornado Data", scope='north america')
-
-    # Convert the figure to JSON
+@app.route('/<string:dataset_id>')
+def show_dataset(dataset_id):
+    # Logic to load the appropriate dataset based on dataset_id
+    # For example, '05-07_torn' could be mapped to a specific file or database query
+    data_file = f"killer-tornado-data/{dataset_id}.csv"  # Construct file name dynamically
+    df = pd.read_csv(data_file)
+    fig = px.scatter_geo(df, lat='slat', lon='slon', scope='usa',
+                         color='mag', size='mag',
+                         title=f"Tornadoes Dataset: {dataset_id}")
     graphJSON = pio.to_json(fig)
-    return render_template('visualization.html', graphJSON=graphJSON)
+    return render_template('visualization.html', dataset_id=dataset_id, graphJSON=graphJSON)
+
+@app.route('/navigation')
+def navigation():
+    return render_template('navigation.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

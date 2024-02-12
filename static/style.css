@@ -1,0 +1,91 @@
+.index-nav body {
+    background-color: #333; /* Dark grey background */
+    color: white; /* Light text color for contrast */
+    font-family: Arial, sans-serif; /* Optional: Change the font */
+}
+.index-nav nav {
+    width: 800vw; /* Twice the viewport width */
+    height: 60vh;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: flex-start; /* Align items to the start of the nav container */
+    padding: 20px;
+    background-color: #333; /* Dark grey background for the nav bar */
+}
+
+.index-nav nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+}
+
+.index-nav nav ul li {
+    margin: 10px 0; /* Add some space between list items */
+}
+
+.index-nav nav ul li a {
+    display: block; /* Make the link fill the li for larger click area */
+    padding: 6vh 80px; /* Increase padding vertically to fill the increased nav height */
+    background-color: #333; /* Initial background color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    front-size: 64px;
+}
+
+.index-nav nav ul li a:hover {
+    background-color: white; /* Change background color on hover */
+    color: #333; /* Change text color on hover for better contrast */
+}
+
+.support-link {
+    float: right;
+    margin-right: 20px;
+    background-color: #555; /* Slightly lighter grey for the button */
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px; /* Optional: Rounded corners for the button */
+}
+.support-link:hover {
+    background-color: #777; /* Change color on hover for visual feedback */
+}
+#tornadoPlot {
+    width: 100%; /* Use full width of the container */
+    margin-left: 0; /* Align left edge with the page */
+}
+.killer_tornadoes nav {
+    display: flex;
+    justify-content: start; /* Align items to the start horizontally */
+    align-items: center; /* Center items vertically within the nav */
+    padding: 10px 20px;
+    background-color: #333; /* Dark grey background for the nav bar */
+}
+
+.killer_tornadoes nav ul li:nth-child(2) {
+    margin-right: 700px; /* Assuming the original gap was 20px, 10 times larger would be 200px */
+}
+
+.killer_tornadoes nav ul {
+    list-style-type: none;
+    display: flex; /* Make the list horizontal */
+    padding: 0;
+    margin: 0;
+}
+
+.killer_tornadoes nav ul li {
+    margin-right: 20px; /* Add some space between list items */
+}
+
+.killer_tornadoes nav ul li a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.killer_tornadoes nav ul li a:hover {
+    background-color: white; /* Change background color on hover */
+    color: #333; /* Change text color on hover for better contrast */
+    padding: 10px; /* Add padding to increase the size on hover */
+}
+

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <title>Tornado Tracker {{ year }}</title>
+    <title>Visualization - Tornado Tracker</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
@@ -11,6 +9,7 @@
     <nav>
         <ul>
             <li><a href="/navigation">Explore Tornadoes from Other Years</a></li>
+            <li><a href="/05-07_torn">Refresh</a></li>
             <li><a href="/">Return to Home</a></li>
         </ul>
     </nav>
@@ -21,3 +20,4 @@
     </script>
 </body>
 </html>
+

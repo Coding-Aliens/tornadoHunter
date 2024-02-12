@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Home - Tornado Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/visualization">Visualization</a></li>
-        </ul>
-    </nav>
+<body class="index-nav">
     <h1>
         Welcome To Tornado Hunters' Website
     </h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/navigation">See killer Tornadoes Record</a></li>
+        </ul>
+        <a href="/support">Support</a>
+    </nav>
 
 <div id="tornadoPlot"></div>
 
