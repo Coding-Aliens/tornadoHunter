@@ -6,26 +6,46 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body class="index-nav">
-    <h1>
-        Welcome To Tornado Hunters' Website
-    </h1>
+<div class="hero">
+        <!-- Existing Content -->
+
+<!-- Support Button -->
+        <button class="top-right-button" id="supportBtn">Support</button>
+
+<!-- The Modal -->
+        <div id="supportModal" class="modal">
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>How can we help you?</h2>
+                <form id="supportForm">
+                    <label for="userEmail">Your Email:</label><br>
+                    <input type="email" id="userEmail" name="userEmail" required><br>
+                    <label for="userIssue">Describe your issue:</label><br>
+                    <textarea id="userIssue" name="userIssue" required></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <img src="{{ url_for('static', filename='images/tornado.jpg') }}" alt="Tornado" class="hero-image">
+        <h1>Welcome to the Tornado Tracker</h1>
+        <p>Explore and learn about tornado occurrences across different years.</p>
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
             <li><a href="/navigation">See killer Tornadoes Record</a></li>
         </ul>
-        <a href="/support">Support</a>
-    </nav>
 
-<div id="tornadoPlot"></div>
+    </nav>
+    </div>
 
 <script>
-fetch('/tornado_data')
+fetch('/')
     .then(response => response.json())
     .then(data => {
         Plotly.newPlot('tornadoPlot', data.data, data.layout);
     });
 </script>
-
+<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
 </body>
 </html>

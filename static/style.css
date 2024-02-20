@@ -1,19 +1,25 @@
+.index-nav {
+    background-color: #333; /* A nice shade of blue */
+    overflow: hidden;
+}
 .index-nav body {
     background-color: #333; /* Dark grey background */
     color: white; /* Light text color for contrast */
     font-family: Arial, sans-serif; /* Optional: Change the font */
 }
 .index-nav nav {
+    justify-content: start;
     width: 800vw; /* Twice the viewport width */
     height: 60vh;
     display: flex;
-    flex-direction: column; /* Align items vertically */
+
     align-items: flex-start; /* Align items to the start of the nav container */
     padding: 20px;
     background-color: #333; /* Dark grey background for the nav bar */
 }
 
 .index-nav nav ul {
+    display: flex;
     list-style-type: none;
     padding: 0;
     margin: 0; /* Remove default margin */
@@ -36,6 +42,22 @@
 .index-nav nav ul li a:hover {
     background-color: white; /* Change background color on hover */
     color: #333; /* Change text color on hover for better contrast */
+}
+
+.top-right-button {
+    position: absolute;
+    right: 10px; /* Adjust based on desired spacing from the right edge */
+    top: 10px; /* Adjust based on desired spacing from the top */
+    /* Additional button styling */
+    padding: 10px 20px;
+    background-color: #333; /* Example button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.top-right-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
 }
 
 .support-link {
@@ -87,5 +109,79 @@
     background-color: white; /* Change background color on hover */
     color: #333; /* Change text color on hover for better contrast */
     padding: 10px; /* Add padding to increase the size on hover */
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image {
+    width: 100%;
+    height: 5%;
+    opacity: 0.5; /* Adjust opacity to ensure text readability */
+}
+
+.hero h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+.hero p {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+}
+
+/* Style for the modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Styling the Support button */
+.top-right-button {
+    /* Add your styles here (e.g., positioning, colors) */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
 
