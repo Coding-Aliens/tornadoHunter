@@ -185,3 +185,33 @@
     cursor: pointer;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-around; /* Adjust the space between columns */
+}
+
+.nav-column a {
+    display: block; /* Make links take up the full width of the container */
+    margin-bottom: 100px; /* Space between links */
+    font-size: 1.5em;
+}
+
+/* Additional styling for aesthetics */
+.nav-column a:link, .nav-column a:visited {
+    color: white; /* Link color */
+    margin-bottom: 100px;
+    text-decoration: none; /* No underline */
+    padding: 10px; /* Padding around links */
+    border: 1px solid white; /* Border around links */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.nav-column a:hover, .nav-column a:active {
+    background-color: white; /* Background color on hover/active */
+    color: white; /* Text color on hover/active */
+}
+
+#start {
+    color: white;
+    margin-bottom: 50px;
+}
