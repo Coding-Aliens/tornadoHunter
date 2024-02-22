@@ -3,7 +3,7 @@
 - Lane Xie 
 
 ### Project Description
-Promote knowledge about tornadoes
+A interactive website built by Flask. Enable users to check the data related to tornado in the USA. 
 
 ### Built With
 - Python, Flask, Plotly, Bokeh, HTML, CSS, JavaScript
@@ -18,11 +18,15 @@ Promote knowledge about tornadoes
   ```
 
 ### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Fork the repo 
 2. Clone the repo
    ```sh
    git clone https://github.com/your_username_/Project-Name.git
    ```
+
+### Running
+Go to the root of your repo, type in cmd:
+   ```sh
+  python -m flask run
+   ```
+Then go to the website showing up 
