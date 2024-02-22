@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Bokeh Plot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script type="text/javascript" src="{{cdn_js | safe}}"></script>
+</head>
+<body class="killer_tornadoes">
+    <nav>
+        <ul>
+            <li><a href="/by_year">Refresh</a></li>
+            <li><a href="/">Return to Home</a></li>
+        </ul>
+    </nav>
+    <div id="myplot"></div> <!-- The div where the plot will be embedded -->
+    {{script1 | safe}}
+    {{div1 | safe}}
+</body>
+</html>
